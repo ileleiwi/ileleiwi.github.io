@@ -1,0 +1,71 @@
+# Theme + skin
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "contrast"  # options: air, aqua, contrast, dark, dirt, mint, neon, plum, sunrise
+
+# Site identity
+title: "Ikaia (Kai) Leleiwi"
+name: "Ikaia (Kai) Leleiwi"
+description: "Postdoctoral Researcher @ LLNL — soil microbiomes, metagenomics, SIP/qSIP, Bayesian models"
+url: "https://ileleiwi.github.io"
+locale: "en-US"
+
+# Author profile (shows in sidebar on pages where author_profile: true)
+author:
+  name: "Ikaia (Kai) Leleiwi"
+  avatar: "/assets/images/kai.jpg"   # add your headshot here
+  bio: "Postdoctoral Researcher at LLNL. Bioinformatics, metagenomics, microbial ecology, SIP/qSIP, Bayesian modeling."
+  location: "Lawrence Livermore National Laboratory"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:leleiwi1@llnl.gov"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ileleiwi"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/ileleiwi/"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar"   # requires Academicons CSS; optional to remove if you don't add it
+      url: "https://scholar.google.com/"
+
+# Build & plugins
+markdown: kramdown
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Search (Lunr). Indexes posts and collection docs; set full content for better recall.
+search: true
+search_full_content: true  # indexes entire body; may slightly increase index size
+# (Lunr behavior notes & options documented in Minimal Mistakes config.) 
+
+# Include custom pages directory
+include:
+  - _pages
+
+# Collections (optional—use later if you want itemized Projects/Talks/Pubs as documents)
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:path/
+#   talks:
+#     output: true
+#     permalink: /talks/:path/
+#   pubs:
+#     output: true
+#     permalink: /publications/:path/
+
+# Defaults: enable author profile on section pages
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Footer + misc
+timezone: America/Denver
+

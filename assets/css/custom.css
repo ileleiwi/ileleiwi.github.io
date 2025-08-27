@@ -1,0 +1,12 @@
+/* Add semi-transparent background to the splash title + subtitle text */
+
+.splash .page__title,
+.splash .page__excerpt {
+  background: rgba(0, 0, 0, 0.5); /* black box with 50% opacity */
+  display: inline-block;
+  padding: 0.4em 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+

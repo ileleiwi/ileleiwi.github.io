@@ -1,14 +1,5 @@
-/* Custom styling for splash title and excerpt with frosted glass effect */
-
-.splash .page__title,
-.splash .page__excerpt {
-  background: rgba(255, 255, 255, 0.2); /* light transparent background */
-  backdrop-filter: blur(6px);          /* this gives the "frosted glass" effect */
-  -webkit-backdrop-filter: blur(6px);  /* Safari support */
-  border-radius: 12px;
-  padding: 0.5em 1em;
-  display: inline-block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  color: #fff; /* Force text to stay white for contrast */
+.splash .page__title {
+  background: yellow !important;
+  color: red !important;
 }
 

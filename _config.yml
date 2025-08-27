@@ -70,3 +70,8 @@ defaults:
 # Footer + misc
 timezone: America/Denver
 
+assets:
+  css:
+    - /assets/css/custom.css
+
+

@@ -5,16 +5,16 @@ author_profile: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.25"
-  overlay_image: /assets/images/hero_soil.jpg   # add a wide banner image
+  overlay_image: /assets/images/hero_soil.jpg
   caption: "Photo: your credit"
 excerpt: "Soil microbiomes • metagenomics • SIP/qSIP • Bayesian hierarchical models • HPC pipelines"
-intro: 
-  - excerpt: "Postdoctoral Researcher at LLNL specializing in microbial ecology and multi‑omics."
+intro:
+  - excerpt: "Postdoctoral Researcher at LLNL specializing in microbial ecology and multi-omics."
 feature_row:
   - image_path: /assets/images/feature_projects.jpg
     alt: "Research Projects"
     title: "Research Projects"
-    excerpt: "What I'm building and studying, from SIP/qSIP to genome‑resolved metagenomics."
+    excerpt: "What I'm building and studying, from SIP/qSIP to genome-resolved metagenomics."
     url: "/projects/"
     btn_label: "Learn more"
     btn_class: "btn--primary"
@@ -28,12 +28,33 @@ feature_row:
   - image_path: /assets/images/feature_pubs.jpg
     alt: "Publications"
     title: "Publications"
-    excerpt: "Peer‑reviewed papers and preprints."
+    excerpt: "Peer-reviewed papers and preprints."
     url: "/publications/"
     btn_label: "See publications"
     btn_class: "btn--primary"
 ---
 
+<style>
+/* DEBUG: make sure styles apply */
+.page__hero--overlay .page__title{
+  background: yellow !important;
+  color: red !important;
+}
+
+/* When you see red/yellow working, replace the block above with this: */
+/*
+.page__hero--overlay .page__title,
+.page__hero--overlay .page__lead{
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 0.5em 1em;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: #fff;
+}
+*/
+</style>
+
 {% include feature_row id="feature_row" %}
-
-

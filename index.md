@@ -35,14 +35,6 @@ feature_row:
 ---
 
 <style>
-/* DEBUG: make sure styles apply */
-.page__hero--overlay .page__title{
-  background: yellow !important;
-  color: red !important;
-}
-
-/* When you see red/yellow working, replace the block above with this: */
-/*
 .page__hero--overlay .page__title,
 .page__hero--overlay .page__lead{
   background: rgba(255,255,255,0.2);
@@ -54,7 +46,6 @@ feature_row:
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   color: #fff;
 }
-*/
 </style>
 
 {% include feature_row id="feature_row" %}

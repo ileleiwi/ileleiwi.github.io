@@ -10,9 +10,8 @@ header:
 excerpt: "Soil microbiomes • metagenomics • SIP/qSIP • Bayesian hierarchical models • HPC pipelines"
 intro:
   - excerpt: "Postdoctoral Researcher at LLNL specializing in microbial ecology and multi-omics."
-<div style="display:flex;justify-content:center;margin:1rem 0;">
+
 {% include author-profile.html %}
-</div>
 
 feature_row:
   - image_path: /assets/images/about.jpg

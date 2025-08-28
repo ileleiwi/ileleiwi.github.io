@@ -18,13 +18,6 @@ feature_row:
     url: "/projects/"
     btn_label: "Learn more"
     btn_class: "btn--primary"
-  - image_path: /assets/images/feature_talks.jpg
-    alt: "Talks"
-    title: "Talks"
-    excerpt: "Slides & recordings for invited talks, defenses, and conference presentations."
-    url: "/talks/"
-    btn_label: "View talks"
-    btn_class: "btn--primary"
   - image_path: /assets/images/feature_pubs.jpg
     alt: "Publications"
     title: "Publications"

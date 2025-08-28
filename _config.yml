@@ -27,7 +27,7 @@ author:
       url: "https://www.linkedin.com/in/ileleiwi/"
     - label: "Google Scholar"
       icon: "ai ai-google-scholar"   # requires Academicons CSS; optional to remove if you don't add it
-      url: "https://scholar.google.com/"
+      url: "https://scholar.google.com/citations?hl=en&user=kt0RvJkAAAAJ"
 
 # Build & plugins
 markdown: kramdown

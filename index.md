@@ -7,11 +7,11 @@ header:
   overlay_filter: "0.25"
   overlay_image: /assets/images/hero_soil.jpg
   caption: "Photo: your credit"
-excerpt: "Soil microbiomes • metagenomics • SIP/qSIP • Bayesian hierarchical models • HPC pipelines"
+excerpt: "Soil microbiomes • metagenomics • SIP/qSIP • Bayesian hierarchical models • Machine Learning • HPC pipelines"
 
 # data for rows lives in YAML (front matter)
 intro:
-  - excerpt: "Postdoctoral Researcher at LLNL specializing in microbial ecology and multi-omics."
+  - excerpt: "Postdoctoral Researcher at LLNL specializing in machine learning methods for microbial ecology and multi-omics."
 
 feature_row:
   - image_path: /assets/images/about.jpg

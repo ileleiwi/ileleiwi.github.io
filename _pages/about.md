@@ -6,7 +6,7 @@ author_profile: true
 toc: false
 ---
 
-Hi — I’m **Ikaia (Kai) Leleiwi**, a postdoctoral researcher at **LLNL** focused on using **omics** and **stable-isotope probing (SIP/qSIP)** to understand **soil microbiomes** and their contributions to global biogeochemical cycling. I build reproducible pipelines on HPC infrastructure to process and analyze multi-omics data. I'm particularly interested in using **Bayesian hierarchical models** and machine learning to quantify microbial activity and uncertainty to draw new infrence and discover complex relationships between microbes and their environment.
+Hi — I’m **Ikaia (Kai) Leleiwi**, a postdoctoral researcher at **LLNL** focused on using **omics** and **stable-isotope probing (SIP/qSIP)** to understand **soil microbiomes** and their contributions to global biogeochemical cycling. I build reproducible pipelines on HPC infrastructure to process and analyze multi-omics data. I'm particularly interested in using **Bayesian hierarchical models** and **machine learning** to quantify microbial activity and uncertainty to draw new infrence and discover complex relationships between microbes and their environment.
 
 ## What I work on (right now)
 - **qSIP + BHM:** MAG-level isotope incorporation with moisture/time effects and explicit uncertainty.
@@ -17,12 +17,17 @@ Hi — I’m **Ikaia (Kai) Leleiwi**, a postdoctoral researcher at **LLNL** focu
 > _If it touches Bayesian inference or machine learning + HPC, I’m interested._
 
 ## Tools I like
-`R (tidymodels, brms)` · `Python` · `Rust` · `Snakemake` · `QIIME 2` · `SLURM` · `MEGAHIT/SPAdes` · `DRAM` · `barrnap`
+`R (tidymodels, brms, caret)` · `Python (Keras, PyTorch)` · `Snakemake` · `QIIME 2` · `SLURM` · `MEGAHIT/SPAdes` · `DRAM` · `bbtools`
 
 
 ## Personal Hobbies
-- I'm a huge movie buff (though I've found TV has been better recently)! I read sci-fi and fantasy books and my family and I frequent Denver FanExpo every year (we dressed as Naruto characters this year).
-- I like camping in the beautiful Rocky Mountains and spending time with my wife and two sons.
+<div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
+  <img src="/assets/images/hobbies.jpg" alt="Kai at FanExpo" style="max-width:320px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.15)">
+  <div>
+    - I'm a huge movie buff! I read sci-fi and fantasy books (Orson Scott Card and Robert Jordan are top) and my family and I frequent Denver FanExpo every year (we dressed as Naruto characters this year).<br>
+    - I like camping in the beautiful Rocky Mountains and spending time with my wife and two sons.
+  </div>
+</div>
 
 
 ## Contact

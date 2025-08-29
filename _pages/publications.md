@@ -10,8 +10,8 @@ permalink: /publications/
   .pub-list li{ list-style:disc; margin:0 0 1.25rem 0; }
   .pub-row{ display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap; }
   .pub-text{ flex:1 1 360px; }
-  .pub-img{ flex:0 0 140px; margin-left:auto; }
-  .pub-img img{ max-width:140px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.12); }
+  .pub-img{ flex:0 0 360px; margin-left:auto; }
+  .pub-img img{ max-width:360px; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,.12); }
   @media (max-width:700px){ .pub-img{ order:2; margin-left:0; } }
 </style>
 

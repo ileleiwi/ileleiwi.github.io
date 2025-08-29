@@ -21,13 +21,18 @@ Hi — I’m **Ikaia (Kai) Leleiwi**, a postdoctoral researcher at **LLNL** focu
 
 
 ## Personal Hobbies
+
 <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
-  <img src="/assets/images/naruto.jpg" alt="Kai at FanExpo" style="max-width:320px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.15)">
-  <div>
-    - I'm a huge movie buff! I read sci-fi and fantasy books (Orson Scott Card and Robert Jordan are top) and my family and I frequent Denver FanExpo every year (we dressed as Naruto characters this year).<br>
-    - I like camping in the beautiful Rocky Mountains and spending time with my wife and two sons.
+  <div markdown="1" style="flex:1 1 320px;">
+- I'm a huge movie buff! I read sci-fi and fantasy books (Orson Scott Card and Robert Jordan are top) and my family and I frequent Denver FanExpo every year (we dressed as Naruto characters this year).
+- I like camping in the beautiful Rocky Mountains and spending time with my wife and two sons.
   </div>
+
+  <img src="/assets/images/hobbies.jpg"
+       alt="Kai at FanExpo"
+       style="max-width:320px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.15)">
 </div>
+
 
 
 ## Contact

@@ -20,7 +20,7 @@ permalink: /publications/
 <li>
   <div class="pub-row">
     <div class="pub-text">
-      <strong>Leleiwi I.</strong>, <em>et al.</em>
+      Leleiwi I., <em>et al.</em>
       <strong>Gut microbiota carbon and sulfur metabolisms support <em>Salmonella</em> infections.</strong>
       <em>The ISME Journal</em>, 2024.
       <a href="https://doi.org/10.1093/ismejo/wrae187">https://doi.org/10.1093/ismejo/wrae187</a>
@@ -34,7 +34,7 @@ permalink: /publications/
 <li>
   <div class="pub-row">
     <div class="pub-text">
-      <strong>Borton M.</strong>, <em>et al.</em>
+      Borton M., <em>et al.</em>
       <strong>A functional microbiome catalogue crowdsourced from North American Rivers.</strong>
       <em>Nature</em>, 2025.
       <a href="https://doi.org/10.1038/s41586-024-08240-z">https://doi.org/10.1038/s41586-024-08240-z</a>
@@ -48,7 +48,7 @@ permalink: /publications/
 <li>
   <div class="pub-row">
     <div class="pub-text">
-      <strong>Trubl G.</strong>, <em>et al.</em>
+      Trubl G., <em>et al.</em>
       <strong>Soil redox drives virus-host community dynamics and plant biomass degradation in tropical rainforest soils.</strong>
       <em>bioRxiv</em>, 2024.
       <a href="https://doi.org/10.1101/2024.09.13.612973">https://doi.org/10.1101/2024.09.13.612973</a>
@@ -62,7 +62,7 @@ permalink: /publications/
 <li>
   <div class="pub-row">
     <div class="pub-text">
-      <strong>Leleiwi I.</strong>, <em>et al.</em>
+      Leleiwi I., <em>et al.</em>
       <strong>Exposing new taxonomic variation with inflammation – a murine model-specific genome database for gut microbiome researchers.</strong>
       <em>Microbiome</em>, 2023.
       <a href="https://doi.org/10.1186/s40168-023-01529-7">https://doi.org/10.1186/s40168-023-01529-7</a>

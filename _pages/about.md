@@ -19,18 +19,21 @@ Hi — I’m **Ikaia (Kai) Leleiwi**, a postdoctoral researcher at **LLNL** focu
 ## Tools I like
 `R (tidymodels, brms, caret)` · `Python (Keras, PyTorch)` · `Snakemake` · `QIIME 2` · `SLURM` · `MEGAHIT/SPAdes` · `DRAM` · `bbtools`
 
-
 ## Personal Hobbies
 
 <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
-  <div markdown="1" style="flex:1 1 320px;">
-- I'm a huge movie buff! I read sci-fi and fantasy books (Orson Scott Card and Robert Jordan are top) and my family and I frequent Denver FanExpo every year (we dressed as Naruto characters this year).
-- I like camping in the beautiful Rocky Mountains and spending time with my wife and two sons.
+  <div style="flex:1 1 0; min-width:260px;">
+    <ul>
+      <li>I'm a huge movie buff! I read sci-fi and fantasy books (Orson Scott Card and Robert Jordan are top) and my family and I frequent Denver FanExpo every year (we dressed as Naruto characters this year).</li>
+      <li>I like camping in the beautiful Rocky Mountains and spending time with my wife and two sons.</li>
+    </ul>
   </div>
 
-  <img src="/assets/images/naruto.jpg"
-       alt="Kai at FanExpo"
-       style="max-width:320px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.15)">
+  <img
+    src="/assets/images/naruto.jpg"
+    alt="Kai at FanExpo"
+    style="flex:0 0 320px; max-width:320px; margin-left:auto; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.15)"
+  >
 </div>
 
 

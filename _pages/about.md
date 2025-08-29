@@ -28,7 +28,7 @@ Hi — I’m **Ikaia (Kai) Leleiwi**, a postdoctoral researcher at **LLNL** focu
 - I like camping in the beautiful Rocky Mountains and spending time with my wife and two sons.
   </div>
 
-  <img src="/assets/images/hobbies.jpg"
+  <img src="/assets/images/naruto.jpg"
        alt="Kai at FanExpo"
        style="max-width:320px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.15)">
 </div>

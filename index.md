@@ -8,10 +8,10 @@ header:
   overlay_image: /assets/images/hero_soil.jpg
   caption: "Photo: your credit"
 excerpt: "Soil microbiomes • metagenomics • SIP/qSIP • Bayesian hierarchical models • HPC pipelines"
+
+# data for rows lives in YAML (front matter)
 intro:
   - excerpt: "Postdoctoral Researcher at LLNL specializing in microbial ecology and multi-omics."
-
-{% include author-profile.html %}
 
 feature_row:
   - image_path: /assets/images/about.jpg
@@ -37,6 +37,8 @@ feature_row:
     btn_class: "btn--primary"
 ---
 
+{% include author-profile.html %}
+
 <style>
 .page__hero--overlay .page__title,
 .page__hero--overlay .page__lead{
@@ -50,5 +52,8 @@ feature_row:
   color: #fff;
 }
 </style>
+
+{%- comment -%} Optional: show the intro block centered {%- endcomment -%}
+{% include feature_row id="intro" type="center" %}
 
 {% include feature_row id="feature_row" %}

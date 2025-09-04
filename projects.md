@@ -11,19 +11,13 @@ Below are a few current and recent efforts. (Add images to `/assets/images/` and
 ### SIP/qSIP + Bayesian Hierarchical Models
 I fit a robust Student-t mixed model on raw EAF with identity link, fixed effects for expression (centered), time since rewet (48h vs 168h), and moisture (50 vs 100), and random intercepts and expression slopes by MAG. Residual scale (σ) is modeled by rewet + moisture (heteroskedastic).
 
-Findings.
-
-168h after rewet lowers mean EAF by ~0.03 (3 pp); 95% CrI ≈ [−0.04, −0.02].
-
-Expression: effect ≈ 0; 95% CrI ≈ [−0.01, 0.02].
-
-Interaction (expr × 168h): ≈ 0; little evidence of time-dependent change in the expression–EAF relationship.
-
-Between-MAG variation is substantial: SD(intercept) ≈ 0.12; SD(expr slope) ≈ 0.06.
-
-Variance shrinks at 100% moisture: sigma_moisture100 ≈ −1.72 → σ × exp(−1.72) ≈ 0.18 (≈ 82% reduction).
-
-Heavy tails (ν ≈ 2.24) are appropriate given the zero mass.
+## Findings
+  - 168h after rewet lowers mean EAF by ~0.03 (3 pp); 95% CrI ≈ [−0.04, −0.02].
+  - Expression: effect ≈ 0; 95% CrI ≈ [−0.01, 0.02].
+  - Interaction (expr × 168h): ≈ 0; little evidence of time-dependent change in the expression–EAF relationship.
+  - Between-MAG variation is substantial: SD(intercept) ≈ 0.12; SD(expr slope) ≈ 0.06.
+  - Variance shrinks at 100% moisture: sigma_moisture100 ≈ −1.72 → σ × exp(−1.72) ≈ 0.18 (≈ 82% reduction).
+  - Heavy tails (ν ≈ 2.24) are appropriate given the zero mass.
 
 <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
   <div style="flex:1 1 380px;">

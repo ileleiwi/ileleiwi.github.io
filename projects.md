@@ -1,8 +1,10 @@
 ---
-title: "Research Projects"
+title: "Projects"
 permalink: /projects/
-toc: false
+layout: single
+author_profile: true
 ---
+
 
 Below are a few current and recent efforts. (Add images to `/assets/images/` and link out to slides/papers/data.)
 
@@ -25,14 +27,16 @@ Heavy tails (ν ≈ 2.24) are appropriate given the zero mass.
 
 <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
   <div style="flex:1 1 380px;">
-    <details><summary><strong>Model summary</strong></summary>
-{% capture fit_summary %}{% include_relative ../assets/code/qsip-bhm/results/fit_t_lin-summary.txt %}{% endcapture %}
-<pre>{{ fit_summary }}</pre>
-    </details>
-    <details><summary><strong>R script</strong></summary>
-{% capture code_r %}{% include_relative ../assets/code/qsip-bhm/Final_Bayesian_Model.R %}{% endcapture %}
+    <details><summary><strong>Model summary (brms)</strong></summary>
+{% capture fit_summary %}{% include_relative assets/code/qsip-bhm/results/fit_t_lin-summary.txt %}{% endcapture %}
+{% highlight text linenos %}{{ fit_summary }}{% endhighlight %}
+</details>
+
+<details><summary><strong>R script</strong></summary>
+{% capture code_r %}{% include_relative assets/code/qsip-bhm/Final_Bayesian_Model.R %}{% endcapture %}
 {% highlight r linenos %}{{ code_r }}{% endhighlight %}
-    </details>
+</details>
+
   </div>
   <div style="flex:0 0 320px; max-width:320px; margin-left:auto;">
     <img src="/assets/code/qsip-bhm/figs/cond_effect_expr_by_rewet.png" alt="Conditional effects"

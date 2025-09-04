@@ -7,13 +7,21 @@ toc: false
 Below are a few current and recent efforts. (Add images to `/assets/images/` and link out to slides/papers/data.)
 
 ### SIP/qSIP + Bayesian Hierarchical Models
-Here I fit a robust **t** mixed model with fixed effects accounting for moisture and time and random intercepts/slopes per MAG.
-- Predictors: expression (centered), time since rewet (48h vs 168h), moisture; heteroskedastic σ by rewet + moisture.
-- Identity link handled with t family and informative priors.
-- Key findings: 
-    - Substantial vairation in EAF between MAGs. 168h post rewet lowers mean EAF by ~3. Exp[ression isn't a reliable predictor of EAF in this model.
+I fit a robust Student-t mixed model on raw EAF with identity link, fixed effects for expression (centered), time since rewet (48h vs 168h), and moisture (50 vs 100), and random intercepts and expression slopes by MAG. Residual scale (σ) is modeled by rewet + moisture (heteroskedastic).
 
-**Findings (qSIP + BHM).** Baseline EAF ≈ 0.07 (95% CI 0.04–0.10). Rewet 168h lowers mean EAF by ~0.03 (95% CI −0.04 to −0.02). Expression effect ≈ 0 (−0.01 to 0.02), and the 168h interaction is ~0. Residual variance drops ~82% at 100% moisture (σ × exp(−1.72) ≈ 0.18). Consider a zero-one inflated Beta to capture the 0-spike explicitly.
+Findings.
+
+168h after rewet lowers mean EAF by ~0.03 (3 pp); 95% CrI ≈ [−0.04, −0.02].
+
+Expression: effect ≈ 0; 95% CrI ≈ [−0.01, 0.02].
+
+Interaction (expr × 168h): ≈ 0; little evidence of time-dependent change in the expression–EAF relationship.
+
+Between-MAG variation is substantial: SD(intercept) ≈ 0.12; SD(expr slope) ≈ 0.06.
+
+Variance shrinks at 100% moisture: sigma_moisture100 ≈ −1.72 → σ × exp(−1.72) ≈ 0.18 (≈ 82% reduction).
+
+Heavy tails (ν ≈ 2.24) are appropriate given the zero mass.
 
 <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
   <div style="flex:1 1 380px;">

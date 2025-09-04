@@ -1,0 +1,99 @@
+
+## ---------------------------
+## Script: Final_Bayesian_Model.R
+## ---------------------------
+
+## Libraries ##
+library(tidyverse)
+library(cmdstanr)
+library(brms)
+library(emmeans)
+library(bayesplot)
+library(posterior)
+library(yardstick)
+
+# install_cmdstan()   
+set_cmdstan_path(cmdstanr::cmdstan_path())
+options(brms.backend = "cmdstanr") 
+
+# Output dirs 
+out_dir <- "."
+dir.create(file.path(out_dir, "figs"), recursive = TRUE, showWarnings = FALSE)
+dir.create(file.path(out_dir, "results"), recursive = TRUE, showWarnings = FALSE)
+
+df <- read_tsv("data/metag_metat_eaf.tsv")
+
+#prep data
+df_prepped <- df |>
+  filter(rewet %in% c("48h", "168h")) |>
+  mutate(
+    n = n(),
+    expr_cent = expression_ra_log10_cent,
+    expr_cent_scaled = expression_ra_mapping_scaled_log10_cent,
+    rewet = factor(rewet, levels = c("48h", "168h")),
+    moisture = factor(moisture, levels = c("50", "100")),
+    mag_id = factor(mag_id)
+  ) |>
+  select(mag_id, rewet, moisture, expr_cent, expr_cent_scaled, EAF = mean_resampled_EAF)
+
+
+##model with unchanged EAF values
+#student-t mixed model with raw EAF identity link
+
+form_t_lin <- bf(
+  EAF ~ expr_cent * rewet + moisture + (1 + expr_cent | mag_id),
+  sigma ~ rewet + moisture
+)
+
+priors_t <- c(
+  # mu
+  set_prior("normal(0.05, 0.05)", class = "Intercept"),  # around a few percent EAF
+  set_prior("normal(0, 0.02)",    class = "b"),
+  
+  # random effects
+  set_prior("exponential(20)",    class = "sd"),
+  set_prior("lkj(2)",             class = "cor"),
+  
+  # sigma (log link)
+  set_prior("normal(-2.9, 0.2)",  class = "Intercept", dpar = "sigma"),
+  set_prior("normal(0, 0.2)",     class = "b",         dpar = "sigma"),
+  
+  # nu (df)
+  set_prior("gamma(2, 0.5)",      class = "nu", lb = 2)  # mean ≈ 4
+)
+
+
+fit_t_lin <- brm(
+  formula = form_t_lin,
+  data    = df_prepped,
+  family  = student(),   # identity link on mean; σ>0; ν>2
+  prior   = priors_t,
+  chains  = 4, cores = 4, iter = 4000, warmup = 1000, seed = 123,
+  control = list(adapt_delta = 0.995, max_treedepth = 15)
+)
+
+# Save summary text ----
+capture.output(
+  { print(summary(fit_t_lin)) },
+  file = file.path(out_dir, "results", "fit_t_lin-summary.txt")
+)
+
+# Plots ----
+# 1) Fixed effects 
+fx <- c("b_Intercept","b_expr_cent","b_rewet168h","b_moisture100","b_expr_cent:rewet168h")
+p_fx <- mcmc_intervals(as_draws(fit_t_lin), pars = fx) +
+  ggplot2::coord_cartesian(xlim = c(-0.06, 0.06)) +
+  ggplot2::labs(title = "Fixed effects (95% CrI) on EAF")
+ggsave("figs/mcmc_intervals_fixed.png", p_fx, width = 7, height = 5, dpi = 160)
+
+# 2) Conditional effects: expression by rewet
+ce <- conditional_effects(fit_t_lin, effects = "expr_cent:rewet")
+p_ce <- plot(ce, points = FALSE)[[1]] +
+  ggplot2::labs(title = "Conditional effect: Expression × Rewet on EAF",
+                x = "Expression (centered)", y = "Predicted EAF")
+ggsave("figs/cond_effect_expr_by_rewet.png", p_ce, width = 7, height = 5, dpi = 160)
+
+# 3) Posterior predictive check
+p_hist <- pp_check(fit_t_lin, type = "hist", ndraws = 100) +
+  ggplot2::labs(title = "Posterior predictive check: histogram")
+ggsave("figs/pp_check_hist.png", p_hist, width = 7, height = 5, dpi = 160)

@@ -1,0 +1,46 @@
+ Family: student 
+  Links: mu = identity; sigma = log; nu = identity 
+Formula: EAF ~ expr_cent * rewet + moisture + (1 + expr_cent | mag_id) 
+         sigma ~ rewet + moisture
+   Data: df_prepped (Number of observations: 664) 
+  Draws: 4 chains, each with iter = 4000; warmup = 1000; thin = 1;
+         total post-warmup draws = 12000
+
+Multilevel Hyperparameters:
+~mag_id (Number of levels: 104) 
+                         Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+sd(Intercept)                0.12      0.01     0.10     0.14 1.00     2530
+sd(expr_cent)                0.06      0.01     0.04     0.08 1.00     2714
+cor(Intercept,expr_cent)    -0.13      0.16    -0.45     0.19 1.00     4704
+                         Tail_ESS
+sd(Intercept)                5345
+sd(expr_cent)                5505
+cor(Intercept,expr_cent)     7469
+
+Regression Coefficients:
+                    Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept               0.07      0.02     0.04     0.10 1.00     2015
+sigma_Intercept        -2.43      0.09    -2.61    -2.24 1.00     1708
+expr_cent               0.00      0.01    -0.01     0.02 1.00     7590
+rewet168h              -0.03      0.00    -0.04    -0.02 1.00     7870
+moisture100            -0.01      0.01    -0.03     0.00 1.00     2145
+expr_cent:rewet168h     0.00      0.00    -0.01     0.01 1.00     9417
+sigma_rewet168h         0.04      0.16    -0.28     0.34 1.01      837
+sigma_moisture100      -1.72      0.10    -1.92    -1.51 1.00     4858
+                    Tail_ESS
+Intercept               4178
+sigma_Intercept         5644
+expr_cent               8150
+rewet168h               9561
+moisture100             6466
+expr_cent:rewet168h    10047
+sigma_rewet168h         2771
+sigma_moisture100       7936
+
+Further Distributional Parameters:
+   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+nu     2.24      0.19     2.01     2.72 1.00     7701     7416
+
+Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).

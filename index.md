@@ -14,22 +14,19 @@ intro:
   - excerpt: "Postdoctoral Researcher at LLNL specializing in machine learning methods for microbial ecology and multi-omics."
 
 feature_row:
-  - image_path: /assets/images/about.jpg
-    alt: "About"
+  - alt: "About"
     title: "About"
     excerpt: "Who I am and what I like to do."
     url: "/about/"
     btn_label: "About me"
     btn_class: "btn--primary"
-  - image_path: /assets/images/feature_projects.jpg
-    alt: "Research Projects"
+  - alt: "Research Projects"
     title: "Research Projects"
     excerpt: "What I'm building and studying, from SIP/qSIP to genome-resolved metagenomics."
     url: "/projects/"
     btn_label: "Learn more"
     btn_class: "btn--primary"
-  - image_path: /assets/images/feature_pubs.jpg
-    alt: "Publications"
+  - alt: "Publications"
     title: "Publications"
     excerpt: "Peer-reviewed papers and preprints."
     url: "/publications/"

@@ -46,7 +46,7 @@ I fit a robust Student-t mixed model on raw EAF with identity link, fixed effect
 We tested whether genome-encoded **functions/paths** predict which MAGs are **active** under four redox regimes (anoxic, low-frequency, high-frequency, oxic). The left panel ranks pathways by **likelihood-ratio χ²** importance; the right panels summarize **active MAG counts** and **mean gene copy per MAG** across treatments.
 
 <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
-  <div style="flex:1 1 420px; min-width:320px;">
+<div markdown="1" style="flex:1 1 420px; min-width:320px;">
 
 **Findings:**
 - Top predictors include **lactate utilization**, **arsenate reduction**, **siderophore-mediated iron acquisition**, **ETC complexes (I–IV)**, **sulfur metabolism**, and short-chain fatty-acid utilization pathways.
@@ -55,8 +55,7 @@ We tested whether genome-encoded **functions/paths** predict which MAGs are **ac
 
 **Methods (1–2 sentences):**  
 Binomial GLMs (active vs. inactive per MAG×treatment) with pathway indicators/copy numbers as predictors. Importance = **LR χ²** per feature; summaries are cross-tabs of active MAGs and mean gene counts.
-
-  </div>
+</div>
 
   <figure style="flex:0 0 420px; max-width:420px; margin-left:auto;">
     <img src="/assets/code/mag-logreg/figs/logistic_regression_barplot.svg"

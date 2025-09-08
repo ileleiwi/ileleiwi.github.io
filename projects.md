@@ -70,7 +70,7 @@ Binomial GLMs (active vs. inactive per MAG×treatment) with pathway indicators/c
 
 <details><summary><strong>Show analysis code</strong></summary>
 
-{% capture code_r %}{% include_relative assets/code/redox-activity/analysis.R %}{% endcapture %}
+{% capture code_r %}{% include_relative assets/code/mag-logreg/logistic_regression_dram_product_mags.R %}{% endcapture %}
 {% highlight r linenos %}{{ code_r }}{% endhighlight %}
 
 </details>

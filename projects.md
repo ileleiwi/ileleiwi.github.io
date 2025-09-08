@@ -48,10 +48,10 @@ We tested whether genome-encoded **functions/paths** predict which MAGs are **ac
 <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
   <div style="flex:1 1 420px; min-width:320px;">
 
-**Findings (edit to match your run):**
+**Findings:**
 - Top predictors include **lactate utilization**, **arsenate reduction**, **siderophore-mediated iron acquisition**, **ETC complexes (I–IV)**, **sulfur metabolism**, and short-chain fatty-acid utilization pathways.
-- Several functions show **treatment-specific enrichment** (e.g., anaerobic energy metabolism in **anoxic**; iron acquisition patterns shifting under **oxic**).
-- Pathway copy number per MAG helps explain **which genomes become active** under each redox regime, beyond baseline abundance.
+- Iron acquizition is potentially important for active bacteria in anoxic conditions
+- Activity in anoxic soils may also depend on the ability of bacteria to utilize variaous short-chain fatty acids as caebon sources and sulfur compounds as terminal electron acceptors for anaerobic respiration.
 
 **Methods (1–2 sentences):**  
 Binomial GLMs (active vs. inactive per MAG×treatment) with pathway indicators/copy numbers as predictors. Importance = **LR χ²** per feature; summaries are cross-tabs of active MAGs and mean gene counts.
@@ -59,7 +59,7 @@ Binomial GLMs (active vs. inactive per MAG×treatment) with pathway indicators/c
   </div>
 
   <figure style="flex:0 0 420px; max-width:420px; margin-left:auto;">
-    <img src="/assets/code/mag-logreg/figs/logistic_regression_barplot.pdf"
+    <img src="/assets/code/mag-logreg/figs/logistic_regression_barplot.svg"
          alt="Functional predictors of MAG activity across redox treatments"
          style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.12);">
     <figcaption style="font-size:0.9em; opacity:0.85;">

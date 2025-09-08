@@ -3,7 +3,7 @@ title: "CV"
 permalink: /cv/
 ---
 
-**CV (PDF):** [Download](/assets/docs/Leleiwi_CV.pdf)
+**CV (PDF):** [Download](/assets/docs/Ikaia-Leleiwi-CV.pdf)
 
-_Last updated: Aug 2025._
+_Last updated: Sept 2025._
 

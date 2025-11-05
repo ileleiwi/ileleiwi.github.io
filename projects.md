@@ -50,8 +50,8 @@ We tested whether genome-encoded **functions/paths** predict which MAGs are **ac
 
 **Findings:**
 - Top predictors include **lactate utilization**, **arsenate reduction**, **siderophore-mediated iron acquisition**, **ETC complexes (I–IV)**, **sulfur metabolism**, and short-chain fatty-acid utilization pathways.
-- Iron acquizition is potentially important for active bacteria in anoxic conditions
-- Activity in anoxic soils may also depend on the ability of bacteria to utilize variaous short-chain fatty acids as caebon sources and sulfur compounds as terminal electron acceptors for anaerobic respiration.
+- Iron acquisition is potentially important for active bacteria in anoxic conditions
+- Activity in anoxic soils may also depend on the ability of bacteria to utilize various short-chain fatty acids as carbon sources and sulfur compounds as terminal electron acceptors for anaerobic respiration.
 
 **Methods (1–2 sentences):**  
 Binomial GLMs (active vs. inactive per MAG×treatment) with pathway indicators/copy numbers as predictors. Importance = **LR χ²** per feature; summaries are cross-tabs of active MAGs and mean gene counts.

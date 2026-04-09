@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-Below are a few current and recent efforts. (Add images to `/assets/images/` and link out to slides/papers/data.)
+Below are a few current and recent efforts. 
 
 ### SIP/qSIP + Bayesian Hierarchical Models
 I fit a robust Student-t mixed model on raw EAF with identity link, fixed effects for expression (centered), time since rewet (48h vs 168h), and moisture (50 vs 100), and random intercepts and expression slopes by MAG. Residual scale (σ) is modeled by rewet + moisture (heteroskedastic).
@@ -53,7 +53,7 @@ We tested whether genome-encoded **functions/paths** predict which MAGs are **ac
 - Iron acquisition is potentially important for active bacteria in anoxic conditions
 - Activity in anoxic soils may also depend on the ability of bacteria to utilize various short-chain fatty acids as carbon sources and sulfur compounds as terminal electron acceptors for anaerobic respiration.
 
-**Methods (1–2 sentences):**  
+**Methods:**  
 Binomial GLMs (active vs. inactive per MAG×treatment) with pathway indicators/copy numbers as predictors. Importance = **LR χ²** per feature; summaries are cross-tabs of active MAGs and mean gene counts.
 </div>
 

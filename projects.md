@@ -28,19 +28,15 @@ By measuring the density of DNA from microbial communities that have been treate
   </div>
 
 ## Findings
-  - 168h after rewet lowers mean EAF by ~0.03 (3 pp); 95% CrI ≈ [−0.04, −0.02].
-  - Expression: effect ≈ 0; 95% CrI ≈ [−0.01, 0.02].
-  - Interaction (expr × 168h): ≈ 0; little evidence of time-dependent change in the expression–EAF relationship.
-  - Between-MAG variation is substantial: SD(intercept) ≈ 0.12; SD(expr slope) ≈ 0.06.
-  - Variance shrinks at 100% moisture: sigma_moisture100 ≈ −1.72 → σ × exp(−1.72) ≈ 0.18 (≈ 82% reduction).
-  - Heavy tails (ν ≈ 2.24) are appropriate given the zero mass.
+<div style="flex:0 0 640px; max-width:640px; margin-left:auto;">
+    <img src="/assets/code/qsip-bhm/figs/reproduce_data_slide7.png" alt="Conditional effects"
+         style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.12); margin-bottom:12px;">
+  </div>
 
-<div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
-  <div style="flex:1 1 380px;">
-    <details><summary><strong>Model summary (brms)</strong></summary>
-{% capture fit_summary %}{% include_relative assets/code/qsip-bhm/results/fit_t_lin-summary.txt %}{% endcapture %}
-{% highlight text linenos %}{{ fit_summary }}{% endhighlight %}
-</details>
+<div style="flex:0 0 640px; max-width:640px; margin-left:auto;">
+    <img src="/assets/code/qsip-bhm/figs/results_slide8.png" alt="Conditional effects"
+         style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.12); margin-bottom:12px;">
+  </div>
 
 <details><summary><strong>R script</strong></summary>
 {% capture code_r %}{% include_relative assets/code/qsip-bhm/Final_Bayesian_Model.R %}{% endcapture %}

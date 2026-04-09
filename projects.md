@@ -12,6 +12,10 @@ Using R packages cmdstanr and brms, I fit a zero inflated beta model to model qS
 
 By measuring the density of DNA from microbial communities that have been treated with H<sub>2</sub><sup>18</sup>O relative to control densities we can determine if bacteria were actively dividing and incorporating heavy oxygen in their genomes. This is a technique called quantitative stable isotope probing (qSIP), and the resulting metric of activity is EAF.
 
+<div style="flex:0 0 640px; max-width:640px; margin-left:auto;">
+    <img src="/assets/code/qsip-bhm/figs/why_bhm_slide4.png" alt="Conditional effects"
+         style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.12); margin-bottom:12px;">
+  </div>
 ## Model structure
 <div style="flex:0 0 640px; max-width:640px; margin-left:auto;">
     <img src="/assets/code/qsip-bhm/figs/model_structure_slide6.png" alt="Conditional effects"

@@ -16,6 +16,11 @@ By measuring the density of DNA from microbial communities that have been treate
     <img src="/assets/code/qsip-bhm/figs/why_bhm_slide4.png" alt="Conditional effects"
          style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.12); margin-bottom:12px;">
   </div>
+
+<div style="flex:0 0 640px; max-width:640px; margin-left:auto;">
+    <img src="/assets/code/qsip-bhm/figs/zero_inflated_slide5.png" alt="Conditional effects"
+         style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.12); margin-bottom:12px;">
+  </div>
 ## Model structure
 <div style="flex:0 0 640px; max-width:640px; margin-left:auto;">
     <img src="/assets/code/qsip-bhm/figs/model_structure_slide6.png" alt="Conditional effects"

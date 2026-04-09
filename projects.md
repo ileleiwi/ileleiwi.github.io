@@ -10,7 +10,13 @@ Below are a few current and recent efforts.
 ### Using Bayesian hierarchical modeling to answer if qSIP activity correlates with transcription? 
 Using R packages cmdstanr and brms, I fit a zero inflated beta model to model qSIP activity (Excess Atom Fraction, EAF) with fixed effects for expression (transcription), time since rewet (48h vs 168h), and moisture (50% vs 100%), and random intercepts and expression slopes by MAG. 
 
-By measuring the density of DNA from microbial communities that have been treated with H<sub>2<sub><sup>18<sup>O relative to control densities we can determine if bacteria were actively dividing and incorporating heavy oxygen in their genomes. This is a techniqe called quantitative stable isotope probing (qSIP), and the resulting metric of activity is EAF.
+By measuring the density of DNA from microbial communities that have been treated with H<sub>2</sub><sup>18</sup>O relative to control densities we can determine if bacteria were actively dividing and incorporating heavy oxygen in their genomes. This is a technique called quantitative stable isotope probing (qSIP), and the resulting metric of activity is EAF.
+
+## Model structure
+<div style="flex:0 0 320px; max-width:320px; margin-left:auto;">
+    <img src="/assets/code/qsip-bhm/figs/model_structure_slide6.png" alt="Conditional effects"
+         style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.12); margin-bottom:12px;">
+  </div>
 
 ## Findings
   - 168h after rewet lowers mean EAF by ~0.03 (3 pp); 95% CrI ≈ [−0.04, −0.02].

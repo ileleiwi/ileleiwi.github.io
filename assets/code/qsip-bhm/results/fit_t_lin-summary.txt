@@ -1,45 +1,39 @@
- Family: student 
-  Links: mu = identity; sigma = log; nu = identity 
-Formula: EAF ~ expr_cent * rewet + moisture + (1 + expr_cent | mag_id) 
-         sigma ~ rewet + moisture
+Family: zero_inflated_beta 
+  Links: mu = logit; phi = log; zi = logit 
+Formula: EAF_sc ~ s(expr_cent, k = 5, by = rewet) + rewet + moisture + (1 + expr_cent | mag_id) 
+         phi ~ 1 + rewet + moisture
+         zi ~ expr_cent + rewet + moisture + (1 | mag_id)
    Data: df_prepped (Number of observations: 664) 
   Draws: 4 chains, each with iter = 4000; warmup = 1000; thin = 1;
          total post-warmup draws = 12000
 
+Smoothing Spline Hyperparameters:
+                           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sds(sexpr_centrewet48h_1)      0.73      0.81     0.02     2.89 1.00     6416     6100
+sds(sexpr_centrewet168h_1)     1.90      1.34     0.24     5.22 1.00     3563     3018
+
 Multilevel Hyperparameters:
 ~mag_id (Number of levels: 104) 
-                         Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-sd(Intercept)                0.12      0.01     0.10     0.14 1.00     2530
-sd(expr_cent)                0.06      0.01     0.04     0.08 1.00     2714
-cor(Intercept,expr_cent)    -0.13      0.16    -0.45     0.19 1.00     4704
-                         Tail_ESS
-sd(Intercept)                5345
-sd(expr_cent)                5505
-cor(Intercept,expr_cent)     7469
+                         Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)                0.74      0.08     0.60     0.91 1.00     2825     6138
+sd(expr_cent)                0.25      0.14     0.01     0.52 1.00      619     2246
+sd(zi_Intercept)             1.09      0.19     0.75     1.50 1.00     4039     6461
+cor(Intercept,expr_cent)    -0.11      0.33    -0.72     0.70 1.00     4192     2526
 
 Regression Coefficients:
-                    Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
-Intercept               0.07      0.02     0.04     0.10 1.00     2015
-sigma_Intercept        -2.43      0.09    -2.61    -2.24 1.00     1708
-expr_cent               0.00      0.01    -0.01     0.02 1.00     7590
-rewet168h              -0.03      0.00    -0.04    -0.02 1.00     7870
-moisture100            -0.01      0.01    -0.03     0.00 1.00     2145
-expr_cent:rewet168h     0.00      0.00    -0.01     0.01 1.00     9417
-sigma_rewet168h         0.04      0.16    -0.28     0.34 1.01      837
-sigma_moisture100      -1.72      0.10    -1.92    -1.51 1.00     4858
-                    Tail_ESS
-Intercept               4178
-sigma_Intercept         5644
-expr_cent               8150
-rewet168h               9561
-moisture100             6466
-expr_cent:rewet168h    10047
-sigma_rewet168h         2771
-sigma_moisture100       7936
-
-Further Distributional Parameters:
-   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-nu     2.24      0.19     2.01     2.72 1.00     7701     7416
+                       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept                 -1.64      0.14    -1.93    -1.37 1.00     1602     3840
+phi_Intercept              4.12      0.28     3.58     4.67 1.00     3881     7552
+zi_Intercept               0.76      0.21     0.36     1.17 1.00     7913     8807
+rewet168h                  0.17      0.10    -0.02     0.36 1.00     1810     5660
+moisture100               -0.32      0.10    -0.52    -0.12 1.00     1552     4786
+phi_rewet168h             -0.53      0.42    -1.34     0.32 1.00     1697     4816
+phi_moisture100            0.31      0.33    -0.33     0.95 1.00     1633     5101
+zi_expr_cent              -0.32      0.14    -0.62    -0.05 1.00     6446     8318
+zi_rewet168h              -0.33      0.18    -0.69     0.03 1.00    18214     8890
+zi_moisture100             0.55      0.19     0.19     0.92 1.00    18863     8707
+sexpr_cent:rewet48h_1     -0.06      0.44    -0.92     0.80 1.00    13454     9850
+sexpr_cent:rewet168h_1     0.35      0.47    -0.57     1.29 1.00    12625     9035
 
 Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
 and Tail_ESS are effective sample size measures, and Rhat is the potential

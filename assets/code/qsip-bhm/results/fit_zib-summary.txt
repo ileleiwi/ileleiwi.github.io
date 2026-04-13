@@ -1,0 +1,41 @@
+ Family: zero_inflated_beta 
+  Links: mu = logit; phi = log; zi = logit 
+Formula: EAF_sc ~ s(expr_cent, k = 5, by = rewet) + rewet + moisture + (1 + expr_cent | mag_id) 
+         phi ~ 1 + rewet + moisture
+         zi ~ expr_cent + rewet * moisture + (1 | mag_id)
+   Data: df_prepped (Number of observations: 664) 
+  Draws: 4 chains, each with iter = 4000; warmup = 1000; thin = 1;
+         total post-warmup draws = 12000
+
+Smoothing Spline Hyperparameters:
+                           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sds(sexpr_centrewet48h_1)      0.74      0.78     0.02     2.83 1.00     5412     5720
+sds(sexpr_centrewet168h_1)     1.90      1.31     0.23     5.13 1.00     3369     3054
+
+Multilevel Hyperparameters:
+~mag_id (Number of levels: 104) 
+                         Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)                0.74      0.08     0.61     0.91 1.00     2695     4862
+sd(expr_cent)                0.23      0.14     0.01     0.51 1.00      584     2194
+sd(zi_Intercept)             1.52      0.23     1.10     2.02 1.00     3569     6809
+cor(Intercept,expr_cent)    -0.11      0.34    -0.75     0.69 1.00     4781     2569
+
+Regression Coefficients:
+                         Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept                   -1.65      0.14    -1.94    -1.38 1.00     1702     4246
+phi_Intercept                4.10      0.27     3.59     4.64 1.00     3387     6419
+zi_Intercept                 2.07      0.28     1.52     2.64 1.00     4946     7627
+rewet168h                    0.17      0.10    -0.02     0.38 1.00     1880     4710
+moisture100                 -0.32      0.10    -0.51    -0.11 1.00     1527     4076
+phi_rewet168h               -0.50      0.43    -1.30     0.36 1.00     1527     4597
+phi_moisture100              0.29      0.33    -0.36     0.93 1.00     1536     4576
+zi_expr_cent                -0.36      0.18    -0.73    -0.02 1.00     4644     6048
+zi_rewet168h                -2.59      0.30    -3.18    -2.01 1.00     6512     8675
+zi_moisture100              -1.55      0.28    -2.11    -1.01 1.00     6926     8836
+zi_rewet168h:moisture100     4.45      0.41     3.67     5.27 1.00     5803     8532
+sexpr_cent:rewet48h_1       -0.06      0.45    -0.95     0.83 1.00    10645     8475
+sexpr_cent:rewet168h_1       0.35      0.48    -0.57     1.29 1.00     9954     8579
+
+Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
